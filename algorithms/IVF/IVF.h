@@ -585,8 +585,7 @@ struct IVF_Squared {
           weight_class = 1;
         }
 
-        std::cout << "Filter with " << filters.point_count(i) << " points has
-        weight class " << weight_class << std::endl;
+        std::cout << "Filter with " << filters.point_count(i) << " points has weight class " << weight_class << std::endl;
 
         this->posting_lists[i] = std::make_unique<PostingListIndex<T, Point>>(
            this->points, filters.row_indices.get() + filters.row_offsets[i],
